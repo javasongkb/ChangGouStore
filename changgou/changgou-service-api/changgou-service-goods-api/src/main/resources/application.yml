@@ -1,0 +1,25 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: changgou-goods
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/changgou?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true #是否从eureka中获取注册信息
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.javasongkb.changgou.model

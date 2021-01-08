@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javasongkb.changgou.mapper.TaskMapper" >
+  <resultMap id="BaseResultMap" type="com.javasongkb.changgou.model.Task" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="delete_time" property="deleteTime" jdbcType="TIMESTAMP" />
+    <result column="task_type" property="taskType" jdbcType="VARCHAR" />
+    <result column="mq_exchange" property="mqExchange" jdbcType="VARCHAR" />
+    <result column="mq_routingkey" property="mqRoutingkey" jdbcType="VARCHAR" />
+    <result column="request_body" property="requestBody" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="errormsg" property="errormsg" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, update_time, delete_time, task_type, mq_exchange, mq_routingkey, 
+    request_body, status, errormsg
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_task
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_task
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.javasongkb.changgou.model.Task" >
+    insert into tb_task (id, create_time, update_time, 
+      delete_time, task_type, mq_exchange, 
+      mq_routingkey, request_body, status, 
+      errormsg)
+    values (#{id,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{deleteTime,jdbcType=TIMESTAMP}, #{taskType,jdbcType=VARCHAR}, #{mqExchange,jdbcType=VARCHAR}, 
+      #{mqRoutingkey,jdbcType=VARCHAR}, #{requestBody,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{errormsg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.javasongkb.changgou.model.Task" >
+    insert into tb_task
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="deleteTime != null" >
+        delete_time,
+      </if>
+      <if test="taskType != null" >
+        task_type,
+      </if>
+      <if test="mqExchange != null" >
+        mq_exchange,
+      </if>
+      <if test="mqRoutingkey != null" >
+        mq_routingkey,
+      </if>
+      <if test="requestBody != null" >
+        request_body,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="errormsg != null" >
+        errormsg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteTime != null" >
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="taskType != null" >
+        #{taskType,jdbcType=VARCHAR},
+      </if>
+      <if test="mqExchange != null" >
+        #{mqExchange,jdbcType=VARCHAR},
+      </if>
+      <if test="mqRoutingkey != null" >
+        #{mqRoutingkey,jdbcType=VARCHAR},
+      </if>
+      <if test="requestBody != null" >
+        #{requestBody,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="errormsg != null" >
+        #{errormsg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.javasongkb.changgou.model.Task" >
+    update tb_task
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteTime != null" >
+        delete_time = #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="taskType != null" >
+        task_type = #{taskType,jdbcType=VARCHAR},
+      </if>
+      <if test="mqExchange != null" >
+        mq_exchange = #{mqExchange,jdbcType=VARCHAR},
+      </if>
+      <if test="mqRoutingkey != null" >
+        mq_routingkey = #{mqRoutingkey,jdbcType=VARCHAR},
+      </if>
+      <if test="requestBody != null" >
+        request_body = #{requestBody,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="errormsg != null" >
+        errormsg = #{errormsg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.javasongkb.changgou.model.Task" >
+    update tb_task
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      delete_time = #{deleteTime,jdbcType=TIMESTAMP},
+      task_type = #{taskType,jdbcType=VARCHAR},
+      mq_exchange = #{mqExchange,jdbcType=VARCHAR},
+      mq_routingkey = #{mqRoutingkey,jdbcType=VARCHAR},
+      request_body = #{requestBody,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      errormsg = #{errormsg,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

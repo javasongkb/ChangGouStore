@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Areas {
+import java.io.Serializable;
+
+public class Areas implements Serializable {
     private String areaid;
 
     private String area;

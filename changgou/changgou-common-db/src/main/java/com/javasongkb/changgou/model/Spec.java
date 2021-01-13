@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Spec {
+import java.io.Serializable;
+
+public class Spec implements Serializable {
     private Integer id;
 
     private String name;

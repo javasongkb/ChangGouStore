@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class CategoryReportKey {
+public class CategoryReportKey implements Serializable {
     private Integer categoryId1;
 
     private Integer categoryId2;

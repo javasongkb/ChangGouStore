@@ -23,3 +23,7 @@ feign:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: com.javasongkb.changgou.model
+
+logging:
+  level:
+    com.javasongkb.changgou: debug

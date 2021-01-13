@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class OauthCode {
+import java.io.Serializable;
+
+public class OauthCode implements Serializable {
     private String code;
 
     private byte[] authentication;

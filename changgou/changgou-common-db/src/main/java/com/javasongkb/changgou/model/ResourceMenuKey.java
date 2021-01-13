@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class ResourceMenuKey {
+import java.io.Serializable;
+
+public class ResourceMenuKey implements Serializable {
     private Integer resourceId;
 
     private String menuId;

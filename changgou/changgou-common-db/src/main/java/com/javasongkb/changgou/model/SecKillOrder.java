@@ -1,9 +1,10 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class SecKillOrder {
+public class SecKillOrder implements Serializable {
     private Long id;
 
     private Long seckillId;

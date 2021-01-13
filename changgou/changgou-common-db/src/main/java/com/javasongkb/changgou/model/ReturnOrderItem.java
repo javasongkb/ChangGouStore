@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class ReturnOrderItem {
+import java.io.Serializable;
+
+public class ReturnOrderItem implements Serializable {
     private String id;
 
     private Integer categoryId;

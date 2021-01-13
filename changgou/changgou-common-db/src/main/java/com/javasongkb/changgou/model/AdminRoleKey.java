@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class AdminRoleKey {
+import java.io.Serializable;
+
+public class AdminRoleKey implements Serializable {
     private Integer adminId;
 
     private Integer roleId;

@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Ad {
+public class Ad implements Serializable {
     private Integer id;
 
     private String name;

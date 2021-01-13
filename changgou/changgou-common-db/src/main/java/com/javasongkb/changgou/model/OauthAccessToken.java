@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class OauthAccessToken {
+import java.io.Serializable;
+
+public class OauthAccessToken implements Serializable {
     private String authenticationId;
 
     private String tokenId;

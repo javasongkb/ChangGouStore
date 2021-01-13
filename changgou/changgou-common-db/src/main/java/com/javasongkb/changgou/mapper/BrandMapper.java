@@ -1,5 +1,6 @@
 package com.javasongkb.changgou.mapper;
 
+import com.github.pagehelper.Page;
 import com.javasongkb.changgou.model.Brand;
 
 import java.util.List;
@@ -18,4 +19,8 @@ public interface BrandMapper {
     int updateByPrimaryKey(Brand record);
 
     List<Brand> findAll();
+
+    List<Brand> selectBrand(Brand brand);
+
+    Page<Brand> selectBrandByCategory(Integer id);
 }

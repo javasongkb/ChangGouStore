@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Para {
+import java.io.Serializable;
+
+public class Para implements Serializable {
     private Integer id;
 
     private String name;

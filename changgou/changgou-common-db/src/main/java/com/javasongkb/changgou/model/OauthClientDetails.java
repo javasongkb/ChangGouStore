@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class OauthClientDetails {
+import java.io.Serializable;
+
+public class OauthClientDetails implements Serializable {
     private String clientId;
 
     private String resourceIds;

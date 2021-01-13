@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class OauthRefreshToken {
+import java.io.Serializable;
+
+public class OauthRefreshToken implements Serializable {
     private String tokenId;
 
     private byte[] token;

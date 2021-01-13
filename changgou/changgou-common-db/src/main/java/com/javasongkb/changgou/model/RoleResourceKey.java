@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class RoleResourceKey {
+import java.io.Serializable;
+
+public class RoleResourceKey implements Serializable {
     private Integer roleId;
 
     private Integer resourceId;

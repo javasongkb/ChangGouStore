@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Pref {
+public class Pref implements Serializable {
     private Integer id;
 
     private Integer cateId;

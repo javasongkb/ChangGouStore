@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Provinces {
+import java.io.Serializable;
+
+public class Provinces implements Serializable {
     private String provinceid;
 
     private String province;

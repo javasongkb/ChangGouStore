@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class OrderLog {
+public class OrderLog implements Serializable {
     private String id;
 
     private String operater;

@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class LoginLog {
+public class LoginLog implements Serializable {
     private Integer id;
 
     private String loginName;

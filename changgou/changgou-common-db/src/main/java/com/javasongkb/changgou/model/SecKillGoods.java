@@ -1,9 +1,11 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.security.SecureRandom;
 import java.util.Date;
 
-public class SecKillGoods {
+public class SecKillGoods implements Serializable {
     private Long id;
 
     private Long goodsId;

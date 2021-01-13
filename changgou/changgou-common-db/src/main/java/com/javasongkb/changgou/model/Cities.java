@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Cities {
+import java.io.Serializable;
+
+public class Cities implements Serializable {
     private String cityid;
 
     private String city;

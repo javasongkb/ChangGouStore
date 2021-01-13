@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class FreightTemplate {
+import java.io.Serializable;
+
+public class FreightTemplate implements Serializable {
     private Integer id;
 
     private String name;

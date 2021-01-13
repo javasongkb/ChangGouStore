@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class CategoryReport extends CategoryReportKey {
+import java.io.Serializable;
+
+public class CategoryReport extends CategoryReportKey implements Serializable {
     private Integer num;
 
     private Integer money;

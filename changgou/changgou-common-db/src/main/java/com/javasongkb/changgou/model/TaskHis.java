@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TaskHis {
+public class TaskHis implements Serializable {
     private Long id;
 
     private Date createTime;

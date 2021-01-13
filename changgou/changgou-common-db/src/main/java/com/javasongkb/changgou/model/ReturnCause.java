@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class ReturnCause {
+import java.io.Serializable;
+
+public class ReturnCause implements Serializable {
     private Integer id;
 
     private String cause;

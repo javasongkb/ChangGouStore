@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class StockBack extends StockBackKey {
+public class StockBack extends StockBackKey implements Serializable {
     private Integer num;
 
     private String status;

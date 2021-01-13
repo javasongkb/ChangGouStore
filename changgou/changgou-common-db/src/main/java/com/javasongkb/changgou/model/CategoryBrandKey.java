@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class CategoryBrandKey {
+import java.io.Serializable;
+
+public class CategoryBrandKey implements Serializable {
     private Integer categoryId;
 
     private Integer brandId;

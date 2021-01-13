@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Template {
+import java.io.Serializable;
+
+public class Template implements Serializable {
     private Integer id;
 
     private String name;

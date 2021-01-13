@@ -1,8 +1,9 @@
 package com.javasongkb.changgou.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class OauthApprovals {
+public class OauthApprovals implements Serializable {
     private String userid;
 
     private String clientid;

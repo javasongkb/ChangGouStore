@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class PointLog {
+import java.io.Serializable;
+
+public class PointLog implements Serializable {
     private String orderId;
 
     private String userId;

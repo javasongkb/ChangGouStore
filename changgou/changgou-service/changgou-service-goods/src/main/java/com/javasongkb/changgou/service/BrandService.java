@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.service;
 
+import com.github.pagehelper.Page;
 import com.javasongkb.changgou.model.Brand;
+import com.javasongkb.changgou.pojo.Result;
 
 import java.util.List;
 
@@ -13,5 +15,15 @@ import java.util.List;
  * @outhor:宋凯标
  */
 public interface BrandService {
-    List<Brand> findAll();
+    Page<Brand> findAll(String input);
+
+    Result queryBrand(String input);
+
+    Result addBrand(String input);
+
+    Result updateBrand(String input);
+
+    Result deleteBrand(String input);
+
+    Result queryBrandByCategory(String input);
 }

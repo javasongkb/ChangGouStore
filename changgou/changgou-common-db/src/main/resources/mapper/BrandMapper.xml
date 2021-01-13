@@ -95,4 +95,33 @@
     <include refid="Base_Column_List"/>
     from tb_brand
   </select>
+
+  <select id="selectBrand" resultMap="BaseResultMap" parameterType="com.javasongkb.changgou.model.Brand">
+    select
+    <include refid="Base_Column_List"></include>
+    from tb_brand
+    where 1 = 1
+    <if test="id != null and id != ''">
+      and id = #{id}
+    </if>
+    <if test="name != null and name != ''">
+      and name = #{name}
+    </if>
+    <if test="image != null and image != ''">
+      and image = #{image}
+    </if>
+    <if test="letter != null and letter != ''">
+      and letter = #{letter}
+    </if>
+    <if test="seq != null and seq != ''">
+      and seq = #{seq}
+    </if>
+  </select>
+
+  <select id="selectBrandByCategory" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_brand b,tb_category_brand cb
+    where  cb.category_id=#{id} and b.id=cb.brand_id
+  </select>
 </mapper>

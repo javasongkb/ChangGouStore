@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class OauthAccessTokenWithBLOBs extends OauthAccessToken {
+import java.io.Serializable;
+
+public class OauthAccessTokenWithBLOBs extends OauthAccessToken implements Serializable {
     private byte[] token;
 
     private byte[] authentication;

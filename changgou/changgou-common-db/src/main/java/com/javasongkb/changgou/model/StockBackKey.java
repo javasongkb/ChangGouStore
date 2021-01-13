@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class StockBackKey {
+import java.io.Serializable;
+
+public class StockBackKey implements Serializable {
     private String orderId;
 
     private String skuId;

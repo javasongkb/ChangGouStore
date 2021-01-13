@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Spu {
+import java.io.Serializable;
+
+public class Spu implements Serializable {
     private Long id;
 
     private String sn;

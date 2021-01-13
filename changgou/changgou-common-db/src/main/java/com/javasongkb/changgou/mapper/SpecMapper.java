@@ -1,5 +1,7 @@
 package com.javasongkb.changgou.mapper;
 
+import com.github.pagehelper.Page;
+import com.javasongkb.changgou.model.Brand;
 import com.javasongkb.changgou.model.Spec;
 
 public interface SpecMapper {
@@ -14,4 +16,6 @@ public interface SpecMapper {
     int updateByPrimaryKeySelective(Spec record);
 
     int updateByPrimaryKey(Spec record);
+
+    Page<Spec> selectSpecByCategoryId(Integer id);
 }

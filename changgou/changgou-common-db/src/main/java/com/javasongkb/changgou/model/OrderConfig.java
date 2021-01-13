@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class OrderConfig {
+import java.io.Serializable;
+
+public class OrderConfig implements Serializable {
     private Integer id;
 
     private Integer orderTimeout;

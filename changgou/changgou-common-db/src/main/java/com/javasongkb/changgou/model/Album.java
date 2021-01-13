@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Album {
+import java.io.Serializable;
+
+public class Album implements Serializable {
     private Long id;
 
     private String title;

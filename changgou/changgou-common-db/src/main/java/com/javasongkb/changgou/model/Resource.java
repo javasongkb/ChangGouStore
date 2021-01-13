@@ -1,6 +1,8 @@
 package com.javasongkb.changgou.model;
 
-public class Resource {
+import java.io.Serializable;
+
+public class Resource implements Serializable {
     private Integer id;
 
     private String resKey;
